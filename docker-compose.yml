@@ -1,0 +1,10 @@
+services:
+  streaming-server:
+    image: "alqutami/rtmp-hls"
+    container_name: streaming-server
+    ports:
+      - "1935:1935"
+      - "8080:8080"
+    volumes:
+      - ./nginx3.conf:/etc/nginx/nginx.conf
+      - ./data:/opt/data
