@@ -1,3 +1,2 @@
 cd ..
-.\.venv\Scripts\python.exe .\segwatch\main.py
-pause
+.\.venv\Scripts\python.exe .\main.py
