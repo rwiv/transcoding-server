@@ -1,3 +1,3 @@
 cd ..
-docker compose -f .\docker-compose-cuda.yml up
+docker compose -f .\docker\docker-compose-cuda.yml up
 pause
