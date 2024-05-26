@@ -1,0 +1,17 @@
+services:
+  transcoding-server:
+    image: transcoding-server
+    container_name: transcoding-server
+    working_dir: /usr/src/app
+    entrypoint: sleep 1000000000
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/usr/src/app/data
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu, video]
